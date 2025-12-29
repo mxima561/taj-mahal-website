@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { MenuItem } from '../types';
 import { X } from 'lucide-react';
 
@@ -27,9 +28,9 @@ const MenuOverlay: React.FC<MenuOverlayProps> = ({ isOpen, onClose, items }) => 
       <div className="h-full w-full flex items-center justify-center">
         <nav className="flex flex-col items-center gap-4 md:gap-6">
           {items.map((item, index) => (
-            <a 
+            <Link 
               key={index}
-              href={item.href}
+              to={item.href}
               onClick={onClose}
               className={`text-4xl md:text-6xl font-display font-bold uppercase text-white hover:text-taj-gold transition-all duration-300 transform ${
                 isOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
@@ -37,7 +38,7 @@ const MenuOverlay: React.FC<MenuOverlayProps> = ({ isOpen, onClose, items }) => 
               style={{ transitionDelay: `${index * 50}ms` }}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
           
           <div className="mt-12 flex gap-6 text-gray-400">

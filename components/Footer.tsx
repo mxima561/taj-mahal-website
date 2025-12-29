@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { SOCIAL_LINKS } from '../constants';
 
 const Footer: React.FC = () => {
@@ -28,19 +29,19 @@ const Footer: React.FC = () => {
             <div>
               <h4 className="text-white font-bold uppercase mb-4">Explore</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="hover:text-taj-gold transition-colors">Events Calendar</a></li>
-                <li><a href="#" className="hover:text-taj-gold transition-colors">VIP Experience</a></li>
-                <li><a href="#" className="hover:text-taj-gold transition-colors">Gallery</a></li>
-                <li><a href="#" className="hover:text-taj-gold transition-colors">Store</a></li>
+                <li><Link to="/events" className="hover:text-taj-gold transition-colors">Events Calendar</Link></li>
+                <li><Link to="/vip" className="hover:text-taj-gold transition-colors">VIP Experience</Link></li>
+                <li><Link to="/gallery" className="hover:text-taj-gold transition-colors">Gallery</Link></li>
+                <li><Link to="/music" className="hover:text-taj-gold transition-colors">Music</Link></li>
               </ul>
             </div>
             <div>
-              <h4 className="text-white font-bold uppercase mb-4">Legal</h4>
+              <h4 className="text-white font-bold uppercase mb-4">Info</h4>
               <ul className="space-y-2">
+                <li><Link to="/about" className="hover:text-white transition-colors">About The Club</Link></li>
+                <li><Link to="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
                 <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Terms & Conditions</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Cookie Policy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
               </ul>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu } from 'lucide-react';
 import MenuOverlay from './MenuOverlay';
 import { MENU_ITEMS } from '../constants';
@@ -20,11 +21,11 @@ const Header: React.FC = () => {
       <header className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 px-4 py-4 md:px-8 md:py-6 flex justify-between items-center pointer-events-none`}>
         {/* Logo */}
         <div className={`pointer-events-auto transition-opacity duration-300 ${isScrolled ? 'opacity-0 md:opacity-100' : 'opacity-100'}`}>
-          <a href="/" className="block">
+          <Link to="/" className="block">
             <div className="font-display font-bold text-2xl md:text-3xl tracking-tighter text-white bg-taj-black/50 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
               TAJ MAHAL
             </div>
-          </a>
+          </Link>
         </div>
 
         {/* Menu Button */}

@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
       >
         <div className="absolute inset-0 bg-black/30 z-10" />
         <img 
-          src="https://images.unsplash.com/photo-1566737236500-c8ac43014a67?q=80&w=2000&auto=format&fit=crop" 
+          src="/BACKGROUND.jpg" 
           alt="Club Atmosphere" 
           className="w-full h-full object-cover"
         />
